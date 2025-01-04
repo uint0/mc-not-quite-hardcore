@@ -1,8 +1,15 @@
 plugins {
 	id 'fabric-loom' version '1.9-SNAPSHOT'
 	id 'maven-publish'
+	// kotlin("jvm") version "2.1.0"
+
 	id "org.jetbrains.kotlin.jvm" version "2.1.0"
 }
+kotlin {
+	jvmToolchain(21)
+}
+
+ext.kotlin_version = "2.1.0"
 
 version = project.mod_version
 group = project.maven_group
